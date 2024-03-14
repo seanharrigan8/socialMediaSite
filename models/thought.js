@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const dateFormat = require('../utils/dateFormat');
+const dateFormat = require('../utils/dateFormat.js');
 
 //Reaction Schema//
 const reactionSchema = new Schema({
@@ -30,7 +30,7 @@ const reactionSchema = new Schema({
         id: false
     });
     
-    const Reaction = mongoose.model('Reaction', reactionSchema);
+    // const Reaction = mongoose.model('Reaction', reactionSchema);
     
 
 //thought Schema//

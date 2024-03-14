@@ -1,16 +1,20 @@
-const mongoose = require('mongoose');
+const { mongo } = require('mongoose');
 require('dotenv').config();
+const mongoose = require('mongoose');
+
+
 
 
 
 const connectDB = async () => {
     try {
-        await mongoose.connect('mongodb://localhost:27-17/socialsitedb', {
+        await mongoose.connect(process.env.MONGODB_URL, {
             useNewUrlParser: true, 
             useUnifiedTopology: true,
             useCreateIndex: true,
             useFindAndModify: false
     });
+
     console.log('MongoDB is Connected...');
     } catch (err) {
         console.error(err.message);
