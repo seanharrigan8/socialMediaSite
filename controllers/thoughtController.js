@@ -1,7 +1,7 @@
 const Thought = require('../models/thought');
 const User = require('../models/user');
 
-module.exports = {
+const thoughtController = {
     async getAllThoughts(req, res) {
         try {
             const thoughts = await Thought.find({}).populate('reactions');
@@ -109,6 +109,8 @@ async deleteReaction(req, res) {
     }
 }
 };
+
+module.exports = thoughtController;
 
 
 
