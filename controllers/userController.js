@@ -1,4 +1,8 @@
 const User = require('../models/user');
+const Thought = require('../models/thought');
+const Reaction = require('../models/thought');
+
+
 
 userController = {
     async getAllUsers(req, res) {
@@ -18,7 +22,13 @@ userController = {
                 res.status(404).json({ message: 'No user found with this id!' });
                 return;
             }
-            res.json(user);
+            res.json({
+                ...user.toObject(), 
+                friendCount: user.friends.length,
+            thoughtCount: user.thoughts.length
+
+            });
+            
         } catch (err) {
             console.log(err);
             res.status(400).json(err);

@@ -2,6 +2,8 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 const dateFormat = require("../utils/dateFormat.js");
+const Thought = require("./thought");
+
 
 // Define the schema for a User
 const UserSchema = new mongoose.Schema(
