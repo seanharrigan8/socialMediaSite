@@ -26,7 +26,7 @@ With the dependies install, simply input npm run start in the root directory. Th
 
 ## Video Walkthrough
 
-https://drive.google.com/file/d/1T8_Ml6ygAmX2_giSpWf9LLUZB6WesKZ4/view?usp=sharing)
+https://drive.google.com/file/d/1FD3LbM10K6Pdv0uwYlAukLIhqXFSbpVA/view?usp=sharing
 
 
 ## Contribution
