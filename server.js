@@ -1,5 +1,6 @@
 const express = require('express');
 require('dotenv').config() 
+
 const connectDB = require('./config/connection');
 const dotenv = require('dotenv');;
 const routes = require('./routes');
@@ -24,5 +25,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(routes);
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
+
 
 
