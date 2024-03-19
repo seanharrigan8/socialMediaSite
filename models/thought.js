@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
 const dateFormat = require('../utils/dateFormat.js');
 const { Schema, model } = mongoose;
-import Reaction from './reaction.js';
+const Reaction= require('./reaction.js');
+
 // Importing required modules
 
 
@@ -29,7 +30,7 @@ const thoughtSchema = new mongoose.Schema({
     },
 
     // Array of reactions associated with the thought
-    reactions: [reactionSchema],
+    reactions: [Reaction.schema],
 },
 {
     // Options for JSON serialization

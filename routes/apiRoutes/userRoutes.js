@@ -15,10 +15,12 @@ router.route("/").get(getAllUsers).post(createUser);
 
 //Route to get, update, and delete by id
 
-router.route("/:userId").get(getSingleUser).delete(deleteUser).put(updateUser);
+router.route("/:userId").get(getUserById).delete(deleteUser).put(updateUser);
 
 router.route("/:userId/friends").post(addFriend);
 
-router.route("/:userId/friends/:friendId").delete(removeFriend);
+router.route("/:userId/friends").delete(removeFriend);
+
+
 
 module.exports = router;

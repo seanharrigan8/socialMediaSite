@@ -1,7 +1,7 @@
-import mongoose from 'mongoose';
-import dateFormat from '../utils/dateFormat.js';
-const { Schema } = mongoose;
-import Thought from './thought.js';
+const mongoose = require('mongoose');
+const dateFormat = require('../utils/dateFormat.js');
+const { Schema, } = mongoose;
+
 
 
 
@@ -35,3 +35,5 @@ const reactionSchema = new mongoose.Schema({
 });
 
 const Reaction = mongoose.model('Reaction', reactionSchema);
+
+module.exports = Reaction;
