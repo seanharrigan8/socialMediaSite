@@ -23,6 +23,11 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(routes);
 
-app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
+app.listen(PORT, () => {
+    console.log(`App listening on port ${PORT}!`);
+}
+);
+
+
 
 
